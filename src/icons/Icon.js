@@ -9,14 +9,11 @@ import {
 } from 'react-native';
 import Color from 'color';
 
-import getIconType from '../helpers/getIconType';
-import getIconStyle from '../helpers/getIconStyle';
 import { withTheme } from '../config';
 
 const Icon = (props) => {
   const {
-    type,
-    name,
+    name: icon,
     size,
     color: colorProp,
     iconStyle,
@@ -43,8 +40,7 @@ const Icon = (props) => {
   const color = colorProp || theme.colors.black;
   const reverseColor = reverseColorProp || theme.colors.white;
 
-  const IconComponent = getIconType(type);
-  const iconSpecificStyle = getIconStyle(type, { solid, brand });
+  const IconComponent = icon;
   const getBackgroundColor = () => {
     if (reverse) {
       return color;
@@ -110,10 +106,9 @@ const Icon = (props) => {
               { backgroundColor: 'transparent' },
               iconStyle && iconStyle,
             ])}
-            size={size}
-            name={name}
+            width={size}
+            height={size}
             color={reverse ? reverseColor : color}
-            {...iconSpecificStyle}
             {...iconProps}
           />
         </View>
@@ -123,8 +118,7 @@ const Icon = (props) => {
 };
 
 Icon.propTypes = {
-  type: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.node,
   size: PropTypes.number,
   color: PropTypes.string,
   Component: PropTypes.elementType,

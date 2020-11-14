@@ -11,6 +11,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
+import AccountBoxIcon from "@mdi/svg/svg/account-box.svg";
 
 import { withTheme } from '../config';
 import { renderNode, nodeType, ImageSourceType } from '../helpers';
@@ -71,7 +72,7 @@ const AvatarComponent = ({
       <Icon
         style={iconStyle && iconStyle}
         color={icon.color || 'white'}
-        name={icon.name || 'user'}
+        name={icon.name || AccountBoxIcon}
         size={icon.size || iconSize}
         type={icon.type && icon.type}
       />

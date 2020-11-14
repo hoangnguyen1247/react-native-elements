@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
+import AccountBoxIcon from "@mdi/svg/svg/account-box.svg";
 
-import getIconType from '../helpers/getIconType';
+import Icon from '../icons/Icon';
 
 const CheckBoxIcon = ({
   checked,
@@ -11,24 +11,21 @@ const CheckBoxIcon = ({
   size,
   checkedIcon,
   uncheckedIcon,
-  iconType,
   checkedColor,
   uncheckedColor,
 }) => {
-  if (checked && React.isValidElement(checkedIcon)) {
-    return checkedIcon;
+  if (checked && React.isValidElement(AccountBoxIcon)) {
+    return AccountBoxIcon;
   }
 
-  if (!checked && React.isValidElement(uncheckedIcon)) {
-    return uncheckedIcon;
+  if (!checked && React.isValidElement(AccountBoxIcon)) {
+    return AccountBoxIcon;
   }
-
-  const VectorIcon = iconType ? getIconType(iconType) : FAIcon;
 
   return (
-    <VectorIcon
+    <Icon
       color={checked ? checkedColor : uncheckedColor}
-      name={checked ? checkedIcon : uncheckedIcon}
+      name={checked ? AccountBoxIcon : AccountBoxIcon}
       size={size || 24}
       style={{ minWidth: size || 24 }}
       onLongPress={onLongIconPress}

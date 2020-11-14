@@ -31,10 +31,6 @@ import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
 import BottomSheet from './bottomSheet/BottomSheet';
-import {
-  AirbnbRating as BaseAirbnbRating,
-  Rating as BaseRating,
-} from 'react-native-ratings';
 
 // helpers
 import Text from './text/Text';
@@ -45,11 +41,7 @@ import {
   ThemeContext,
   withTheme,
 } from './config';
-import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
-
-const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
-const Rating = withTheme(BaseRating, 'Rating');
 
 export {
   Badge,
@@ -68,15 +60,11 @@ export {
   SearchBar,
   Icon,
   colors,
-  getIconType,
-  registerCustomIconType,
   normalize,
   Tile,
   Slider,
   Avatar,
   Accessory,
-  Rating,
-  AirbnbRating,
   Header,
   Overlay,
   ThemeProvider,

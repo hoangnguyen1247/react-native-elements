@@ -1,6 +1,6 @@
 {
-  "name": "react-native-elements",
-  "version": "3.0.0-alpha.1",
+  "name": "@hoangnguyen1247/react-native-elements",
+  "version": "3.0.0-alpha.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "files": [
@@ -37,6 +37,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "@mdi/svg": "^5.8.55",
     "@types/react-native-vector-icons": "^6.4.5",
     "auto-changelog": "^2.2.1",
     "color": "^3.1.2",
@@ -45,12 +46,13 @@
     "lodash.isequal": "^4.5.0",
     "opencollective-postinstall": "^2.0.3",
     "prop-types": "^15.7.2",
-    "react-native-ratings": "^7.3.0",
     "react-native-size-matters": "^0.3.1",
     "react-native-status-bar-height": "^2.5.0"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
+    "@svgr/webpack": "^5.4.0",
+    "@testing-library/react-native": "^7.0.2",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.0",
     "@types/react-native": "^0.63.2",
@@ -67,7 +69,6 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.2",
-    "@testing-library/react-native": "^7.0.2",
     "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
